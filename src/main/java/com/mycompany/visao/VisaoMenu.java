@@ -21,8 +21,14 @@ public class VisaoMenu {
         System.out.println("2 - Alterar produto");
         System.out.println("3 - Remover produto");
         System.out.println("4 - Listar produtos");
+        System.out.println("5 - Vender produto");
         System.out.println("=========================================");
         int opcaoMenu = new Scanner(System.in).nextInt();
+        
+        if(ControleSistema.produtos.isEmpty() && opcaoMenu == 3 || opcaoMenu == 5 && ControleSistema.produtos.isEmpty() ){
+            System.out.println("Não tem nenhum produto cadastrado!");
+            opcaoMenu = 0;
+        }
         
         return opcaoMenu;
     }
@@ -94,4 +100,17 @@ public class VisaoMenu {
         
         return produtoRemover;
     }
-}
+public static int menuVenderProduto(){
+        System.out.println("==============VENDER PRODUTO==============");
+        System.out.println("Qual produto você deseja vender? ");
+        
+         for(int i = 0; i < ControleSistema.produtos.size(); i++){
+           System.out.println(i + 1 + " | " + ControleSistema.produtos.get(i)); 
+        }
+    
+        System.out.println("==========================================");
+        int produtoVender = new Scanner(System.in).nextInt();
+        
+        return produtoVender;
+    }     
+ }

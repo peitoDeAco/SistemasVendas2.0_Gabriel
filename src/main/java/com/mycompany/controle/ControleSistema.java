@@ -106,4 +106,42 @@ public class ControleSistema {
        }    
        }
     }
-}
+        public static void Vender(int indiceProduto){
+            indiceProduto = indiceProduto - 1;
+        
+        Object object = produtos.get(indiceProduto);
+        
+        if(object instanceof VideoGame){
+            VideoGame videoGame = new VideoGame();
+            videoGame = (VideoGame) object;
+            
+            System.out.println("Qual a quantidade  de " + videoGame.getNome() + "? ");
+            int quantidade = new Scanner(System.in).nextInt();
+            
+            Double preco = videoGame.getPreco() * quantidade;
+            
+            System.out.println("A quantidade do " + videoGame.getNome() + " da o preço de " + preco);
+           
+        }else if(object instanceof Computador){
+            Computador computador = new Computador();
+            computador = (Computador) object;
+            
+            System.out.println("Qual a quantidade  de " + computador.getNome() + "? ");
+            int quantidade = new Scanner(System.in).nextInt();
+            
+            Double preco = computador.getPreco() * quantidade;
+            
+            System.out.println("A quantidade do " + computador.getNome() + " da o preço de " + preco);
+        }else if(object instanceof Televisao){
+            Televisao televisao = new Televisao();
+            televisao = (Televisao) object;
+            
+            System.out.println("Qual a quantidade  de " + televisao.getNome() + "? ");
+            int quantidade = new Scanner(System.in).nextInt();
+            
+            Double preco = televisao.getPreco() * quantidade;
+            
+            System.out.println("A quantidade do " + televisao.getNome() + " da o preço de " + preco);
+        }
+    }
+        }
