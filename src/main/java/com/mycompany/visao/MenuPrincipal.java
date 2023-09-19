@@ -37,6 +37,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnVender = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Menu principal");
 
         btnCadastrar.setText("Cadastrar");
         btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
@@ -89,7 +90,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
         MenuEscolhaCategoria menuEscolhaCategoria = new MenuEscolhaCategoria();
         
-        menuEscolhaCategoria.setTitle("Categoria");
         menuEscolhaCategoria.setLocationRelativeTo(null);
         menuEscolhaCategoria.setVisible(true);
     }//GEN-LAST:event_btnCadastrarActionPerformed

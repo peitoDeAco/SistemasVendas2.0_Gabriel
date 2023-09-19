@@ -4,6 +4,8 @@
  */
 package com.mycompany.visao;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author gabriel.07907
@@ -31,6 +33,7 @@ public class MenuEscolhaCategoria extends javax.swing.JFrame {
         btnOk = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Seleção de categoria");
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setText("Selecione a categoria que deseja cadastrar");
@@ -65,7 +68,12 @@ public class MenuEscolhaCategoria extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+        
+    private void btnOkActionPerformed(java.awt.event.ActionEvent evt){
+           //switch(cbCategorias.setSelectedIndex())
+           
+           JOptionPane.showMessageDialog(null, cbCategorias.getSelectedItem());
+    }
     /**
      * @param args the command line arguments
      */
